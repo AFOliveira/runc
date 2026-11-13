@@ -148,6 +148,14 @@ ppc64le)
 	url="https://github.com/debuerreotype/docker-debian-artifacts/raw/3ba08903ca3fd48fe59ba92b02744a2f5d4d9d6f/buster/slim/rootfs.tar.xz"
 	;;
 
+riscv64)
+	# Debian 10 "Buster" has no riscv64 port (official since Debian 13 "Trixie"),
+	# so riscv64 uses Trixie slim, which is an OCI layout (hence "oci/blobs").
+	# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-riscv64
+	# https://github.com/debuerreotype/docker-debian-artifacts/tree/d6c395f6ddd3c6e0ec727e195e3ff5cf640e1f0a/trixie/slim
+	url="https://github.com/debuerreotype/docker-debian-artifacts/raw/d6c395f6ddd3c6e0ec727e195e3ff5cf640e1f0a/trixie/slim/oci/blobs/rootfs.tar.gz"
+	;;
+
 s390x)
 	# https://github.com/debuerreotype/docker-debian-artifacts/tree/dist-s390x
 	# https://github.com/debuerreotype/docker-debian-artifacts/tree/2fddbf8fe632fc5865b140341b68a1358586fff2/buster/slim
